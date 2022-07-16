@@ -1,0 +1,363 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+@mixin link-hover {
+  &:hover{
+    transition: 0.3s;
+    transform: scale(1.2);
+  }
+}
+@mixin hover-efect {
+  &:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    transition: 0.3s;
+  }
+}
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+body{
+  background-color: #828282;
+}
+
+body.locked{
+  overflow-y: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+a {
+  all: unset;
+}
+$daf-blue-color: #30318f;
+$primary: #56ccf2;
+$black: #333333;
+$white: #ffffff;
+$dedaylt-text: #4f4f4f;
+$disabled-text:#828282;
+$borders:#bdbdbd;
+$body-backgrond:#d9d9d9;
+
+.wrapper{
+  max-width: 1200px;
+  min-width: 320px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 10px 30px 30px 30px;
+  overflow: hidden;
+}
+
+.header{
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+
+  .logo{
+    overflow: hidden;
+    width: 200px;
+    margin: 7px 0 0 0;
+
+    .logo-img{
+      width: 100%;
+    }
+  }
+
+  .navigation{
+
+    .nav-list{
+      margin: 0;
+
+      .nav-btn{
+        display: inline-block;
+        cursor: pointer;
+        font-size: 30px;
+        margin-left: 25px;
+        transition: 0.3s;
+        &:hover{
+          color: $daf-blue-color;
+          transform: scale(1.1);
+          transition: 0.5s;
+        }
+        @media only screen and  (max-width: 959px){
+          font-size: 27px;
+          margin-left: 20px;
+          }
+      }
+    }
+    @media only screen and  (max-width: 768px){
+    display: none;
+      }
+  }
+}
+
+
+.burger {
+  width: 40px;
+  height: 40px;
+  border-top: 5px solid $daf-blue-color;
+  border-bottom: 5px solid 
+  $daf-blue-color;
+  align-items: center;
+  margin: 0 30px;
+  display: none;
+  z-index: 10;
+  transition: 0.5s;
+  cursor: pointer;
+
+  @media only screen and  (max-width: 768px){
+    display: flex;
+      }
+}
+.burger.active {
+  transform: translate(50%, 50%);
+  transform: rotate(90deg);
+  transition: 0.5s;
+}
+
+.burger-line {
+  height: 5px;
+  background-color: 
+  $daf-blue-color;
+  line-height: 22px;
+  width: 100%;
+}
+
+.burger-navigation-wrapper{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transition-duration: 0.5s;
+  z-index: 9;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.burger-navigation-wrapper.active{
+  background-color: rgba(41, 41, 41, 0.6);
+  visibility: visible;
+  transition-duration: 0.5s;
+}
+
+.burger-navigation{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 320px;
+  position: absolute;
+  right: -320px;
+  background-color:#ffffff;
+  padding: 150px 55px 0 10px;
+  transition-duration: 0.5s;
+  z-index: 8;
+  border-radius: 10px 0 0 10px;
+
+  .burger-navigation-list{
+    list-style-type: none;
+    justify-content: end;
+    text-align: end;
+    .nav-btn{
+    font-size: 40px;
+    margin-bottom: 25px;
+    }
+  }
+  
+}
+
+.burger-navigation.active{
+  right: 0;
+  transition-duration: 0.5s;
+}
+.start-screen{
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+.main-titile{
+  display: flex;
+  align-items: center;
+  height: 150px;
+  padding: 51px 35px 35px 35px;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+}
+// .breadcrumbs{
+//   width: 100%;
+//   height: 40px;
+// }
+// .header-logo{
+//   text-align: center;
+// }
+
+.main{
+  display: flex;
+  padding-top: 25px;
+  @media only screen and  (max-width: 768px){
+    flex-direction: column;
+      }
+
+  .filters{
+    width: 300px;
+    @media only screen and  (max-width: 768px){
+      width: 100%;
+        }
+  }
+
+  .items-wrapper{
+    padding: 0 0 20px 40px;
+    width: 100%;
+    @media only screen and  (max-width: 768px){
+      padding: 0 0 20px 0;   
+    }
+    .items{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .general-info{
+      width: 100%;
+    }
+  }
+}
+
+.price-filter-wrap{
+  display: flex;
+  justify-content: space-between;
+  
+  .price-filter-value{
+    width: 100px;
+  }
+}
+
+.item{
+  height: 520px;
+  width: 45%;
+  margin-right: 20px;
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  @media only screen and  (max-width: 992px){
+    height: 500px;
+      }
+  @media only screen and  (max-width: 768px){
+    width: 100%;
+    height: 685px;
+    margin-right: 0;
+      }
+  @media only screen and  (max-width: 600px){
+    height: 600px;
+  }
+  @media only screen and  (max-width: 400px){
+    height: 470px;
+      }
+  .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .item-titile{
+    text-align: center;
+  }
+
+      .item-price{
+        font-weight: bold;
+        font-size: 25px;
+        color: #77eb2a;
+        min-width: 120px;
+        text-align: center;
+      }
+    
+    .item-param{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 5px auto;
+      align-items: center;
+      justify-content: center;
+
+      .param-item{
+        font-size: 20px;
+      }
+    }
+    .item-bottom{
+      text-align: center;
+    }
+  @include  hover-efect;
+}
+
+
+.footer{
+  font-size: 16px;
+  display: flex;
+  justify-content: ce;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  .footer-item{
+    margin: 0 20px;
+    padding: 10px;
+  }
+  .logo{
+    img{
+      width: 100%;
+    }
+  }
+  .footer-item{
+    width: 200px;
+    display: flex;
+    align-items: center;
+  }
+  .contact-block{
+    cursor: pointer;
+    width: 200px;
+    transition: 0.3s;
+    @include link-hover();
+    
+    a{
+      display: flex;
+    }
+    img{
+      height: 25px;
+      margin-right: 10px;
+    }
+  }
+  .location-block{
+    a{
+      .img{
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  .social-media-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+  .social-media-item{
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
+    @include link-hover();
+    img{
+      height: 30px;
+    }
+  }
+}

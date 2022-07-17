@@ -453,3 +453,7 @@ a {
 .footer .social-media-item img {
   height: 30px;
 }
+
+.pagination .page-item {
+  cursor: pointer;
+}

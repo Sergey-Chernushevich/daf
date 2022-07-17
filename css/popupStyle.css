@@ -39,7 +39,7 @@
           align-items: center;
   z-index: 21;
   position: relative;
-  height: 90%;
+  max-height: 90%;
 }
 .popup-body .pupup-img {
   overflow: hidden;

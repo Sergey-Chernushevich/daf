@@ -284,6 +284,11 @@ a {
     height: 500px;
   }
 }
+@media only screen and (max-width: 900px) {
+  .item {
+    height: 480px;
+  }
+}
 @media only screen and (max-width: 768px) {
   .item {
     width: 100%;
@@ -294,6 +299,11 @@ a {
 @media only screen and (max-width: 600px) {
   .item {
     height: 600px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .item {
+    height: 510px;
   }
 }
 @media only screen and (max-width: 400px) {

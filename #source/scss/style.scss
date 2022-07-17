@@ -191,13 +191,6 @@ $body-backgrond:#d9d9d9;
   text-align: center;
   justify-content: center;
 }
-// .breadcrumbs{
-//   width: 100%;
-//   height: 40px;
-// }
-// .header-logo{
-//   text-align: center;
-// }
 
 .main{
   display: flex;
@@ -253,6 +246,9 @@ $body-backgrond:#d9d9d9;
   @media only screen and  (max-width: 992px){
     height: 500px;
       }
+      @media only screen and  (max-width: 900px){
+        height: 480px;
+      }
   @media only screen and  (max-width: 768px){
     width: 100%;
     height: 685px;
@@ -260,6 +256,9 @@ $body-backgrond:#d9d9d9;
       }
   @media only screen and  (max-width: 600px){
     height: 600px;
+  }
+  @media only screen and  (max-width: 500px){
+    height: 510px;
   }
   @media only screen and  (max-width: 400px){
     height: 470px;

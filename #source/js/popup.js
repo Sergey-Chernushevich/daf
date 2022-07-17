@@ -3,7 +3,7 @@ function renderPopup(name, data) {
   return `
   <div class="popup-body">
     <div class="pupup-img">
-      <img src="/img/trucks/${item.image}" alt="${item.title}" />
+      <img src="./img/trucks/${item.image}" alt="${item.title}" />
     </div>
     <button type="button" class="btn-close" aria-label="Close"></button>
     <h4 class="popup-title">

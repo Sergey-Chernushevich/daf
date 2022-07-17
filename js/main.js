@@ -10,7 +10,7 @@ const amountOfResults = document.querySelector(".amount-of-results");
 
 function renderCard() {
   return `<div class="card item" data-name = "${item.title}">
-  <img src="../img/trucks/${item.image}" class="card-img-top pb-3" alt="${item.title}">
+  <img src="./img/trucks/${item.image}" class="card-img-top pb-3" alt="${item.title}">
   <div class="card-body">
       <h4 class="item-titile">
         ${item.title}
@@ -29,7 +29,8 @@ function renderNavigation() {
     <a class="nav-btn-link" href="${item.href}">${item.text}</a>
   </li>`;
 }
-const url = "../data/dataset.json";
+const url =
+  "https://raw.githubusercontent.com/alexnaidovich/frontend_test_task/master/dataset.json";
 async function getPageData() {
   const resp = await fetch(url);
   const data = await resp.json();

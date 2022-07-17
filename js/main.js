@@ -29,7 +29,7 @@ function renderNavigation() {
     <a class="nav-btn-link" href="${item.href}">${item.text}</a>
   </li>`;
 }
-const url = "../../data/dataset.json";
+const url = "../data/dataset.json";
 async function getPageData() {
   const resp = await fetch(url);
   const data = await resp.json();

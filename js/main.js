@@ -30,7 +30,7 @@ function renderNavigation() {
   </li>`;
 }
 const url =
-  "https://raw.githubusercontent.com/alexnaidovich/frontend_test_task/master/dataset.json";
+  "https://raw.githubusercontent.com/Sergey-Chernushevich/daf/main/data/data.json";
 async function getPageData() {
   const resp = await fetch(url);
   const data = await resp.json();
